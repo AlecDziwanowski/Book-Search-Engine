@@ -37,21 +37,21 @@ const resolvers = {
     },
     saveBook: async (parent, { thoughtText }, context) => {
       if (context.user) {
-        const thought = await Thought.create({
+        const book = await Book.create({
           thoughtText,
           thoughtAuthor: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
+          { $addToSet: { savedBooks: thought._id } }
         );
 
         return thought;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeThought: async (parent, { thoughtId }, context) => {
+    removeBook: async (parent, { thoughtId }, context) => {
       if (context.user) {
         const thought = await Thought.findOneAndDelete({
           _id: thoughtId,

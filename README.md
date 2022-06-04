@@ -43,15 +43,41 @@ WHEN I click on the Logout button
 ```
 
 ### Back-End Specifications
-You’ll need to complete the following tasks in each of these back-end files:
-* `auth.js`: Update the auth middleware function to work with the GraphQL API.
-* `server.js`: Implement the Apollo Server and apply it to the Express server as middleware.
-* `Schemas` directory:
-	* `resolvers.js`: Define the query and mutation functionality to work with the Mongoose models.
-		**Hint**: Use the functionality in the `user-controller.js` as a guide.
+* `resolvers.js`: Define the query and mutation functionality to work with the Mongoose models.
+const jwt = require('jsonwebtoken');
 
-		* `Mutation` type:
-			* `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
+const secret = 'mysecretssshhhhhhh';
+const expiration = '2h';
+
+module.exports = {
+  authMiddleware: function ({ req }) {
+    let token = req.body.token || req.query.token || req.headers.authorization;
+
+    if (req.headers.authorization) {
+      token = token.split(' ').pop().trim();
+    }
+
+    if (!token) {
+      return req;
+    }
+
+    try {
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      req.user = data;
+    } catch {
+      console.log('Invalid token');
+    }
+
+    return req;
+  },
+  signToken: function ({ email, username, _id }) {
+    const payload = { email, username, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
+};
+
+	* `Mutation` type:
+		* `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
 
 
 ### Front-End Specifications
