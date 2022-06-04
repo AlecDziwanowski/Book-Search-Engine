@@ -127,3 +127,4 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 You are required to submit BOTH of the following for review:
 * The URL of the functional, deployed application.
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* setup atlas and heroku the same way that we did in note taker
