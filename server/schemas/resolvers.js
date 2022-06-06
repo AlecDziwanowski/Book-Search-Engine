@@ -20,50 +20,35 @@ const resolvers = {
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-
       if (!user) {
         throw new AuthenticationError('No user found with this email address');
       }
 
       const correctPw = await user.isCorrectPassword(password);
-
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
       const token = signToken(user);
 
       return { token, user };
     },
-    saveBook: async (parent, { thoughtText }, context) => {
+    saveBook: async (parent, { bookId, authors, description, title, image, link }, context) => {
       if (context.user) {
-        const book = await Book.create({
-          thoughtText,
-          thoughtAuthor: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
+        return await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: thought._id } }
+          { $addToSet: { bookId, authors, description, title, image, link } },
+          { new: true },
         );
-
-        return thought;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    removeBook: async (parent, { thoughtId }, context) => {
+    removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
+        return await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
+          { $pull: { savedBooks: { bookId } } },
+          { new: true },
         );
-
-        return thought;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
