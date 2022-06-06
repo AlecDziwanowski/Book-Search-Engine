@@ -81,3 +81,5 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 * typeDefs: 
   * user - password?
 * what to do with bookCount?
+* need removeBook in mutations.js file?
+* export googleSearchBooks in queries.js file?
