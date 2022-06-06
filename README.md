@@ -1,91 +1,219 @@
-# 21 MERN: Book Search Engine
-## Your Task
-This week, you’ll take starter code with a fully functioning Google Books API search engine built with a RESTful API, and refactor it to be a GraphQL API built with Apollo Server. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. It's already set up to allow users to save book searches to the back end. 
+<div id="top"></div>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-To complete the assignment, you’ll need to do the following:
-1. Set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
-2. Modify the existing authentication middleware so that it works in the context of a GraphQL API.
-3. Create an Apollo Provider so that requests can communicate with an Apollo Server.
-4. Deploy your application to Heroku with a MongoDB database using MongoDB Atlas. Use the [Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) walkthrough for instructions.
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-## Acceptance Criteria
-```md
-GIVEN a book search engine
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-WHEN I load the search engine
-	THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button
-WHEN I click on the Search for Books menu option
-	THEN I am presented with an input field to search for books and a submit button
-WHEN I am not logged in and enter a search term in the input field and click the submit button
-	THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site
-WHEN I click on the Login/Signup menu option
-	THEN a modal appears on the screen with a toggle between the option to log in or sign up
-WHEN the toggle is set to Signup
-	THEN I am presented with three inputs for a username, an email address, and a password, and a signup button
-WHEN the toggle is set to Login
-	THEN I am presented with two inputs for an email address and a password and login button
-WHEN I enter a valid email address and create a password and click on the signup button
-	THEN my user account is created and I am logged in to the site
-WHEN I enter my account’s email address and password and click on the login button
-	THEN I the modal closes and I am logged in to the site
-WHEN I am logged in to the site
-	THEN the menu options change to Search for Books, an option to see my saved books, and Logout
-WHEN I am logged in and enter a search term in the input field and click the submit button
-	THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account
-WHEN I click on the Save button on a book
-	THEN that book’s information is saved to my account
-WHEN I click on the option to see my saved books
-	THEN I am presented with all of the books I have saved to my account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account
-WHEN I click on the Remove button on a book
-	THEN that book is deleted from my saved books list
-WHEN I click on the Logout button
-	THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
-```
+<!-- PROJECT LOGO -->
+<!-- <br /> -->
+<div align="center">
+  <!-- <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a> -->
 
-### Back-End Specifications
-* `resolvers.js`: Define the query and mutation functionality to work with the Mongoose models.
+<h3 align="center">Text Editor</h3>
 
-	* `Mutation` type:
-		* `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
+  <p align="center">
+    <br />
+    <a href="https://github.com/AlecDziwanowski/HW19-TextEditor_PWA"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <!-- was: "View Demo" -->
+    <a href="https://text-editor-j-a-t-e.herokuapp.com/">Deployed Application</a>
+    ·
+    <a href="https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This Progressive Web Application is a browser-based text editor that can be installed and used offline. 
+
+<!-- ### Application Demonstration GIF 
+(for a video use demo link above) -->
+
+<!-- ![Social Network API GIF](./Assets/functionalityGIF.gif) -->
+
+<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Front-End Specifications
-You'll need to create the following front-end files:
-* `queries.js`: This will hold the query `GET_ME`, which will execute the `me` query set up using Apollo Server.
-* `mutations.js`:
-	* `LOGIN_USER` will execute the `loginUser` mutation set up using Apollo Server.
-	* `ADD_USER` will execute the `addUser` mutation.
-	* `SAVE_BOOK` will execute the `saveBook` mutation.
-	* `REMOVE_BOOK` will execute the `removeBook` mutation.
 
-Additionally, you’ll need to complete the following tasks in each of these front-end files:
-* `App.js`: Create an Apollo Provider to make every request work with the Apollo Server.
-* `SearchBooks.js`:
-	* Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
-	* Make sure you keep the logic for saving the book's ID to state in the `try...catch` block! 
-* `SavedBooks.js`:
-	* Remove the `useEffect()` Hook that sets the state for `UserData`.
-	* Instead, use the `useQuery()` Hook to execute the `GET_ME` query on load and save it to a variable named `userData`.
-	* Use the `useMutation()` Hook to execute the `REMOVE_BOOK` mutation in the `handleDeleteBook()` function instead of the `deleteBook()` function that's imported from `API` file. (Make sure you keep the `removeBookId()` function in place!)
-* `SignupForm.js`: Replace the `addUser()` functionality imported from the `API` file with the `ADD_USER` mutation functionality.
-* `LoginForm.js`: Replace the `loginUser()` functionality imported from the `API` file with the `LOGIN_USER` mutation functionality.
+### Built With
+<!-- * [Next.js](https://nextjs.org/)
+* [React.js](https://reactjs.org/)
+* [Vue.js](https://vuejs.org/)
+* [Angular](https://angular.io/)
+* [Svelte](https://svelte.dev/)
+* [Laravel](https://laravel.com) 
+* [JQuery](https://jquery.com) -->
+<!-- * [NPM - Inquirer](https://www.npmjs.com/package/inquirer) -->
+<!-- * [NPM - Jest](https://www.npmjs.com/package/jest) -->
+* [Node.js](https://nodejs.org/en/)
+* [Express.js](https://expressjs.com/)
+* [Babel.js](https://babeljs.io/)
+* [Webpack.js](https://webpack.js.org/)
+* [IndexedDb](https://www.npmjs.com/package/idb)
+<!-- * [MongoDB](https://www.mongodb.com/)
+* [Mongoose](https://www.npmjs.com/package/mongoose)
+* [Moment.js](https://momentjs.com/) -->
 
-### Technical Acceptance Criteria: 40%
-* Satisfies all of the preceding acceptance criteria plus the following:
-	* Has an Apollo Server that uses GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
-	* Use an Apollo Server and apply it to the Express.js server as middleware.
-	* Include schema settings for resolvers and typeDefs as outlined in the homework instructions.
-	* Modify the existing authentication middleware to work in the context of a GraphQL API.
-	* Use an Apollo Provider so that the application can communicate with the Apollo Server.
-	* Application must be deployed to Heroku.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Review
-You are required to submit BOTH of the following for review:
-* The URL of the functional, deployed application.
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-## Questions
-* setup atlas and heroku the same way that we did in note taker
-* typeDefs: 
-  * user - password?
-  * required fields?
+
+<!-- GETTING STARTED -->
+<!-- ## Getting Started
+### Prerequisites
+Install node.js at the url in the "Built With" section above. Then, using the command line, run the commands listed in the "Installation" section below.
+
+### Installation -->
+<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
+<!-- 1. Clone the repo
+    ```sh
+    git clone git@github.com:AlecDziwanowski/HW19-TextEditor_PWA.git
+    ```
+2. Install NPM packages, including Express, Babel, Webpack, and IndexedDB
+    ```sh
+    npm install
+    ```
+3. Run server
+    ```sh
+    npm run start
+    ``` -->
+<!-- 4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ``` -->
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+Visit the [deployed app](https://text-editor-j-a-t-e.herokuapp.com/) and begin text editing. Your text will be saved even on page refresh. You can install this app to use it offline and access it from your program files.
+
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+### Future Modifications
+- remove install button when already installed
+
+<!-- - [ ] Nested Feature -->
+
+See the [open issues](https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thank you!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+Alec Dziwanowski - [LinkedIn](https://www.linkedin.com/in/alecdziwanowski/) and [GitHub](https://github.com/AlecDziwanowski) <br>
+Project Link: [GitHub Repo](https://github.com/AlecDziwanowski/HW19-TextEditor_PWA)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+* My wife, for the support necessary to achieve a new reality.
+* [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
+[contributors-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
+[forks-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/network/members
+[stars-shield]: https://img.shields.io/github/stars/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
+[stars-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
+[issues-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues
+[license-shield]: https://img.shields.io/github/license/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
+[license-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/blob/main/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/AlecDziwanowski
+[product-screenshot]: ./Assets/TPG_Screenshot.png
