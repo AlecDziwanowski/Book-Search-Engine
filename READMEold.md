@@ -78,8 +78,3 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 
 ## Questions
 * setup atlas and heroku the same way that we did in note taker
-* typeDefs: 
-  * user - password?
-* what to do with bookCount?
-* need removeBook in mutations.js file?
-* export googleSearchBooks in queries.js file?

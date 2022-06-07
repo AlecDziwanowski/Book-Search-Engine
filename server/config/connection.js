@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// database name is googlbooks as indicated by url below
+// database name is googlEbooks as indicated by url below
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
