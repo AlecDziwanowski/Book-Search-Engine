@@ -66,11 +66,19 @@ const SearchBooks = () => {
       return false;
     }
 
-    const {authors, description, title, image, link} = bookToSave;
+    const {bookId, authors, title, description, image, link} = bookToSave;
     try {
       const response = await saveBook({
-        });
-        
+        variables: {
+          bookId, 
+          authors, 
+          title, 
+          description, 
+          image, 
+          link
+        }
+      });
+
       if (!response.ok) {
         throw new Error('something went wrong!');
       }
