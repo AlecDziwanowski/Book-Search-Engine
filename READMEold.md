@@ -72,9 +72,5 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 	* Use an Apollo Provider so that the application can communicate with the Apollo Server.
 	* Application must be deployed to Heroku.
 
-## Review
-* The URL of the functional, deployed application.
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
 ## Questions
 * setup atlas and heroku the same way that we did in note taker
