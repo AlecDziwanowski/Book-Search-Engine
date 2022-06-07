@@ -42,15 +42,6 @@ WHEN I click on the Logout button
 	THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button  
 ```
 
-### Front-End Specifications
-Additionally, you’ll need to complete the following tasks in each of these front-end files:
-* `App.js`: Create an Apollo Provider to make every request work with the Apollo Server.
-* `SearchBooks.js`:
-	* Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
-	* Make sure you keep the logic for saving the book's ID to state in the `try...catch` block! 
-* `SignupForm.js`: Replace the `addUser()` functionality imported from the `API` file with the `ADD_USER` mutation functionality.
-* `LoginForm.js`: Replace the `loginUser()` functionality imported from the `API` file with the `LOGIN_USER` mutation functionality.
-
 ### Technical Acceptance Criteria: 40%
 * Satisfies all of the preceding acceptance criteria plus the following:
 	* Has an Apollo Server that uses GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
@@ -62,3 +53,6 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 
 ## Questions
 * setup atlas and heroku the same way that we did in note taker
+* `SearchBooks.js`:
+	* Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
+	* Make sure you keep the logic for saving the book's ID to state in the `try...catch` block!
