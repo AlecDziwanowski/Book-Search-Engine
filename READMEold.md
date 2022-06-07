@@ -53,6 +53,3 @@ WHEN I click on the Logout button
 
 ## Questions
 * setup atlas and heroku the same way that we did in note taker
-* `SearchBooks.js`:
-	* Use the Apollo `useMutation()` Hook to execute the `SAVE_BOOK` mutation in the `handleSaveBook()` function instead of the `saveBook()` function imported from the `API` file.
-	* Make sure you keep the logic for saving the book's ID to state in the `try...catch` block!

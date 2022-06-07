@@ -1,16 +1,14 @@
-import React, { useQuery, useMutation } from 'react';
+import { useQuery, useMutation } from '@apollo/client';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
-
 import { QUERY_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
-import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
-// query user info for logged-in user
-const { loading, response } = useQuery(QUERY_ME);
-// optional chaining for me info
-const userData = response?.me || [];
+  // query user info for logged-in user
+  const { data } = useQuery(QUERY_ME);
+  // optional chaining for me info
+  const userData = data?.me || [];
 
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
@@ -32,9 +30,7 @@ const userData = response?.me || [];
   // when the user 
   const handleDeleteBook = async (bookId) => {
     try {
-      const { response } = await removeBook({
-        variables: { bookId },
-      });
+      await removeBook({ variables: { bookId } });
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
