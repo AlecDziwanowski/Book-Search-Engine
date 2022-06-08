@@ -30,19 +30,19 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-<h3 align="center">Text Editor</h3>
+<h3 align="center">Book Search Engine</h3>
 
   <p align="center">
     <br />
-    <a href="https://github.com/AlecDziwanowski/HW19-TextEditor_PWA"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AlecDziwanowski/bookSearchEngine/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- was: "View Demo" -->
-    <a href="https://text-editor-j-a-t-e.herokuapp.com/">Deployed Application</a>
+    <a href="https://book-search-engine-20220606.herokuapp.com/">Deployed Application</a>
     ·
-    <a href="https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues">Report Bug</a>
+    <a href="https://github.com/AlecDziwanowski/bookSearchEngine/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues">Request Feature</a>
+    <a href="https://github.com/AlecDziwanowski/bookSearchEngine/issues">Request Feature</a>
   </p>
 </div>
 
@@ -74,7 +74,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This Progressive Web Application is a browser-based text editor that can be installed and used offline. 
+This application is a search engine for books on the Google Book Search API. The Book Search Engine was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. This application also has an Apollo Server that uses GraphQL queries and mutations to fetch and modify data. This application was deployed to Heroku with a MongoDB database using MongoDB Atlas. 
 
 <!-- ### Application Demonstration GIF 
 (for a video use demo link above) -->
@@ -97,38 +97,40 @@ This Progressive Web Application is a browser-based text editor that can be inst
 * [JQuery](https://jquery.com) -->
 <!-- * [NPM - Inquirer](https://www.npmjs.com/package/inquirer) -->
 <!-- * [NPM - Jest](https://www.npmjs.com/package/jest) -->
+* [React](https://reactjs.org/)
 * [Node.js](https://nodejs.org/en/)
 * [Express.js](https://expressjs.com/)
-* [Babel.js](https://babeljs.io/)
-* [Webpack.js](https://webpack.js.org/)
-* [IndexedDb](https://www.npmjs.com/package/idb)
-<!-- * [MongoDB](https://www.mongodb.com/)
+* [MongoDB](https://www.mongodb.com/)
 * [Mongoose](https://www.npmjs.com/package/mongoose)
-* [Moment.js](https://momentjs.com/) -->
+* [GraphQL](https://graphql.org/)
+<!-- * [Babel.js](https://babeljs.io/) -->
+<!-- * [Webpack.js](https://webpack.js.org/) -->
+<!-- * [IndexedDb](https://www.npmjs.com/package/idb) -->
+<!-- * [Moment.js](https://momentjs.com/) -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-<!-- ## Getting Started
+## Getting Started
 ### Prerequisites
 Install node.js at the url in the "Built With" section above. Then, using the command line, run the commands listed in the "Installation" section below.
 
-### Installation -->
+### Installation
 <!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
-<!-- 1. Clone the repo
+1. Clone the repo
     ```sh
-    git clone git@github.com:AlecDziwanowski/HW19-TextEditor_PWA.git
+    git clone git@github.com:AlecDziwanowski/bookSearchEngine.git
     ```
-2. Install NPM packages, including Express, Babel, Webpack, and IndexedDB
+2. Install NPM packages
     ```sh
     npm install
     ```
 3. Run server
     ```sh
     npm run start
-    ``` -->
+    ```
 <!-- 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
@@ -140,7 +142,7 @@ Install node.js at the url in the "Built With" section above. Then, using the co
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-Visit the [deployed app](https://text-editor-j-a-t-e.herokuapp.com/) and begin text editing. Your text will be saved even on page refresh. You can install this app to use it offline and access it from your program files.
+Visit the [deployed app](https://book-search-engine-20220606.herokuapp.com/) and begin searching for books. You can create an account to save books for reference later.
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
@@ -151,11 +153,11 @@ Visit the [deployed app](https://text-editor-j-a-t-e.herokuapp.com/) and begin t
 <!-- ROADMAP -->
 ## Roadmap
 ### Future Modifications
-- remove install button when already installed
+- expand the book search to include places to buy the books
 
 <!-- - [ ] Nested Feature -->
 
-See the [open issues](https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/AlecDziwanowski/bookSearchEngine/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -177,7 +179,6 @@ Don't forget to give the project a star! Thank you!
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
 <!-- LICENSE -->
 ## License
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -189,7 +190,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 Alec Dziwanowski - [LinkedIn](https://www.linkedin.com/in/alecdziwanowski/) and [GitHub](https://github.com/AlecDziwanowski) <br>
-Project Link: [GitHub Repo](https://github.com/AlecDziwanowski/HW19-TextEditor_PWA)
+Project Link: [GitHub Repo](https://github.com/AlecDziwanowski/bookSearchEngine)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -204,16 +205,16 @@ Project Link: [GitHub Repo](https://github.com/AlecDziwanowski/HW19-TextEditor_P
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
-[contributors-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
-[forks-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/network/members
-[stars-shield]: https://img.shields.io/github/stars/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
-[stars-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
-[issues-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/issues
-[license-shield]: https://img.shields.io/github/license/AlecDziwanowski/HW19-TextEditor_PWA.svg?style=for-the-badge
-[license-url]: https://github.com/AlecDziwanowski/HW19-TextEditor_PWA/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/AlecDziwanowski/bookSearchEngine.svg?style=for-the-badge
+[contributors-url]: https://github.com/AlecDziwanowski/bookSearchEngine/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AlecDziwanowski/bookSearchEngine.svg?style=for-the-badge
+[forks-url]: https://github.com/AlecDziwanowski/bookSearchEngine/network/members
+[stars-shield]: https://img.shields.io/github/stars/AlecDziwanowski/bookSearchEngine.svg?style=for-the-badge
+[stars-url]: https://github.com/AlecDziwanowski/bookSearchEngine/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AlecDziwanowski/bookSearchEngine.svg?style=for-the-badge
+[issues-url]: https://github.com/AlecDziwanowski/bookSearchEngine/issues
+[license-shield]: https://img.shields.io/github/license/AlecDziwanowski/bookSearchEngine.svg?style=for-the-badge
+[license-url]: https://github.com/AlecDziwanowski/bookSearchEngine/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/AlecDziwanowski
 [product-screenshot]: ./Assets/TPG_Screenshot.png
